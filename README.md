@@ -35,3 +35,10 @@ podman run -d \
   --restart unless-stopped \
   docker.io/tazihad/cloudflare-warp:latest
 ```
+
+Connect with proxy:
+```bash
+http: 127.0.0.1:50000
+socks5: 127.0.0.1:51000
+```
+
