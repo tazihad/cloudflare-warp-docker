@@ -1,3 +1,10 @@
+[![GitHub stars](https://img.shields.io/github/stars/tazihad/cloudflare-warp-docker.svg)](https://github.com/tazihad/cloudflare-warp-docker/stargazers)
+[![GitHub license](https://img.shields.io/github/license/tazihad/cloudflare-warp-docker.svg)](https://github.com/tazihad/cloudflare-warp-docker/blob/main/LICENSE)
+![GitHub build Status](https://img.shields.io/github/actions/workflow/status/tazihad/cloudflare-warp-docker/docker-ci.yml)
+![Docker Stars](https://img.shields.io/docker/stars/tazihad/cloudflare-warp.svg)
+![Docker Pulls](https://img.shields.io/docker/pulls/tazihad/cloudflare-warp.svg)
+![Docker Image Version](https://img.shields.io/docker/v/tazihad/cloudflare-warp?label=latest)
+
 # Cloudflare WARP Container
 
 A lightweight containerized setup for running Cloudflare WARP using Podman. This allows you to route traffic through Cloudflare's WARP service via local SOCKS5 and HTTP proxies.
