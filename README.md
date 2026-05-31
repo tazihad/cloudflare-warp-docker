@@ -42,3 +42,26 @@ http: 127.0.0.1:50000
 socks5: 127.0.0.1:51000
 ```
 
+### Docker Compose Configuration
+
+```yml
+services:
+  warp:
+    image: tazihad/cloudflare-warp:latest # Or ghcr.io/tazihad/cloudflare-warp:latest
+    container_name: cloudflare-warp
+    restart: unless-stopped
+    ports:
+      - "1080:1080" # SOCKS5 Proxy Port
+    environment:
+      - WARP_SLEEP=2 # Optional: wait time before connection
+    cap_add:
+      - NET_ADMIN # Required for WARP networking
+    sysctls:
+      - net.ipv6.conf.all.disable_ipv6=0
+      - net.ipv4.conf.all.src_valid_mark=1
+```
+
+verify
+```sh
+curl -x socks5h://localhost:1080 https://www.cloudflare.com/cdn-cgi/trace
+```
